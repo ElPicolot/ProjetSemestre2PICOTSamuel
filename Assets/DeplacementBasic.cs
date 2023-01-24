@@ -19,6 +19,9 @@ public class DeplacementBasic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        /* Ici, on utilise un get axis pour avoir la sensibilité 
+        pour utiliser eventuellemnt une manette avec des joystic */
+        
         MovementX = Input.GetAxisRaw("Horizontal");
         MovementY = Input.GetAxisRaw("Vertical");
 
