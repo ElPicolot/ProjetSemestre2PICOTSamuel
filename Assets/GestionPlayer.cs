@@ -7,6 +7,8 @@ public class GestionPlayer : MonoBehaviour
     [SerializeField] GameObject PlayerF;
     [SerializeField] GameObject PlayerM;
 
+    
+
     bool isSwitchAvailable = false;
     bool marionettedispo = false;
 
@@ -21,12 +23,13 @@ public class GestionPlayer : MonoBehaviour
     {
         if (Input.GetKey("c") && isSwitchAvailable)
         {
+
             // active le sprite renderer
             // change le tag du player avec la marionette
             // anim ((invoc) 1sec) + effets speciaux
-                // Coroutine
+            // Coroutine
             // levite legerement puis tombe sur le sol
-            // marionette = true
+            marionettedispo = true;
 
 
             print("up arrow key is held down");
