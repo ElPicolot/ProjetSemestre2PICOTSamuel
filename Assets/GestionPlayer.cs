@@ -21,22 +21,44 @@ public class GestionPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("c") && isSwitchAvailable)
+        if (Input.GetKey("c")) /*&& isSwitchAvailable)*/
         {
+            
+            PlayerF.gameObject.GetComponent<DeplacementBasic>().enabled = false;
+            PlayerM.gameObject.GetComponent<DeplacementBasic>().enabled = true;
+            
+            
+
+            PlayerF.gameObject.SetActive(false);
+            PlayerM.gameObject.SetActive(true);
 
             // active le sprite renderer
             // change le tag du player avec la marionette
             // anim ((invoc) 1sec) + effets speciaux
             // Coroutine
             // levite legerement puis tombe sur le sol
+            // enabled playerF rigidbody2D
+
             marionettedispo = true;
 
 
             print("up arrow key is held down");
         }
 
-        if (Input.GetKey("d") && isSwitchAvailable && marionettedispo)
-        {   // Rechanger player tag
+        if (Input.GetKey("d")) /*&& isSwitchAvailable && marionettedispo)*/
+        {
+            
+            PlayerM.gameObject.GetComponent<DeplacementBasic>().enabled = true;
+            PlayerF.gameObject.GetComponent<DeplacementBasic>().enabled = false;
+            
+            
+
+            PlayerM.gameObject.SetActive(false);
+            PlayerF.gameObject.SetActive(true);
+
+
+
+            // Rechanger player tag
             // Anim
             // Destory marionnette
             // 
