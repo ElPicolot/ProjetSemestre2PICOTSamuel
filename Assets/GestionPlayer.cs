@@ -56,6 +56,8 @@ public class GestionPlayer : MonoBehaviour
             PlayerM.gameObject.SetActive(false);
             PlayerF.gameObject.SetActive(true);
 
+            marionettedispo = false;
+
 
 
             // Rechanger player tag
