@@ -21,7 +21,7 @@ public class GestionPlayer : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKey("c")) /*&& isSwitchAvailable)*/
+        if (Input.GetKey("c") && isSwitchAvailable)
         {
             
             PlayerF.gameObject.GetComponent<DeplacementBasic>().enabled = false;
@@ -45,7 +45,7 @@ public class GestionPlayer : MonoBehaviour
             print("up arrow key is held down");
         }
 
-        if (Input.GetKey("d")) /*&& isSwitchAvailable && marionettedispo)*/
+        if (Input.GetKey("d") && isSwitchAvailable && marionettedispo)
         {
             
             PlayerM.gameObject.GetComponent<DeplacementBasic>().enabled = true;
@@ -56,7 +56,7 @@ public class GestionPlayer : MonoBehaviour
             PlayerM.gameObject.SetActive(false);
             PlayerF.gameObject.SetActive(true);
 
-            marionettedispo = false;
+            //marionettedispo = false;
 
 
 
