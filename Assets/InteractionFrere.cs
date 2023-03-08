@@ -20,14 +20,14 @@ public class InteractionFrere : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Interupteur1"))
         {
-
+            Debug.Log("Toucher");
 
 
 
         }
         if (collision.gameObject.CompareTag("Interupteur3"))
         {
-
+            
 
         }
     }
@@ -39,11 +39,19 @@ public class InteractionFrere : MonoBehaviour
         if (collision.gameObject.CompareTag("Interupteur1"))
         {
 
-
+            if (Input.GetKey("t"))
+            {
+                Debug.Log("t");
+                Destroy(gameObject);
+            }
         }
         if (collision.gameObject.CompareTag("Interupteur3"))
         {
+            if(Input.GetKey("r"))
+            {
 
+                Debug.Log("r");
+            }
 
         }
     }

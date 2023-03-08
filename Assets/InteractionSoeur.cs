@@ -32,18 +32,26 @@ public class InteractionSoeur : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        
+        Debug.Log("Staying");
 
 
         if (collision.gameObject.CompareTag("Interupteur1"))
         {
 
-            
+            if (Input.GetKey("f"))
+            {
+                Debug.Log("f");
+                Destroy(gameObject);
+            }
         }
         if (collision.gameObject.CompareTag("Interupteur2"))
         {
+            if (Input.GetKey("g"))
+            {
+                Debug.Log("g");
+                
+            }
 
-            
         }
     }
     private void OnTriggerExit2D(Collider2D collision)

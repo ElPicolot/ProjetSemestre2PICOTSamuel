@@ -10,7 +10,7 @@ public class GestionPlayer : MonoBehaviour
     
 
     bool isSwitchAvailable = false;
-    bool marionettedispo = false;
+    //bool marionettedispo = false;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +39,7 @@ public class GestionPlayer : MonoBehaviour
             // levite legerement puis tombe sur le sol
             // enabled playerF rigidbody2D
 
-            marionettedispo = true;
+            //marionettedispo = true;
 
 
             print("up arrow key is held down");
@@ -56,7 +56,7 @@ public class GestionPlayer : MonoBehaviour
             PlayerM.gameObject.SetActive(false);
             PlayerF.gameObject.SetActive(true);
 
-            marionettedispo = false;
+            //marionettedispo = false;
 
 
 
