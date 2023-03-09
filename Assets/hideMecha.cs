@@ -22,7 +22,7 @@ public class hideMecha : MonoBehaviour
     void Update()
     {
         activationTime += Time.deltaTime;
-        if(invisible && activationTime >= 3 )
+        if(invisible && activationTime >= 10 )
         {
             invisible = false;
             col.a = 1;
@@ -41,5 +41,17 @@ public class hideMecha : MonoBehaviour
             col.a = .2f;
             character.color = col;
         }
+        
+    }
+
+    private void OnTriggerExit2D(Collider2D other)
+    {
+        if (other.tag == "Invisible")
+        {
+            invisible = false;
+            col.a = 1;
+            character.color = col;
+        }
+
     }
 }
