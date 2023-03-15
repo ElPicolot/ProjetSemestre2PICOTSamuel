@@ -33,5 +33,16 @@ public class Interrupteur : MonoBehaviour
             Debug.Log("Girl !");
             //Destroy(gameObject);
         }
+        if (collision.gameObject.tag == "Puppet2" && canActivate)
+        {
+            Debug.Log("Puppet can activate!");
+            canActivate = true;
+            //Destroy(gameObject);
+        }
+        if (collision.gameObject.tag == "Girl1" && canActivate)
+        {
+            Debug.Log("Girl can't activate!!");
+            //Destroy(gameObject);
+        }
     }
 }

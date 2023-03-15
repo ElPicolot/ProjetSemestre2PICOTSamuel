@@ -17,6 +17,7 @@ public class InteractionSoeur : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Entering");
         if (collision.gameObject.CompareTag("Interupteur1"))
         {
 
@@ -56,6 +57,7 @@ public class InteractionSoeur : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        Debug.Log("Exit");
         if (collision.gameObject.CompareTag("Interupteur1"))
         {
 
