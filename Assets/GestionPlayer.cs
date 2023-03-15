@@ -9,13 +9,14 @@ public class GestionPlayer : MonoBehaviour
 
     
 
-    //bool isSwitchAvailable = false;
-    //bool marionettedispo = false;
+    bool isSwitchAvailable = false;
+    bool marionettedispo = false;
+    int timeMarionnette = 5;
 
     // Start is called before the first frame update
     void Start()
     {
-       // isSwitchAvailable = true;
+        isSwitchAvailable = true;
     }
 
     // Update is called once per frame
@@ -26,9 +27,15 @@ public class GestionPlayer : MonoBehaviour
             //&& isSwitchAvailable)
             PlayerF.gameObject.GetComponent<DeplacementBasic>().enabled = false;
             PlayerM.gameObject.GetComponent<DeplacementBasic>().enabled = true;
-            
-            
 
+            if(isSwitchAvailable)
+            {
+                print("Possible");
+            }
+            if(marionettedispo)
+            {
+                print("Marioneete Disponible");
+            }
             PlayerF.gameObject.SetActive(false);
             PlayerM.gameObject.SetActive(true);
 
@@ -39,7 +46,7 @@ public class GestionPlayer : MonoBehaviour
             // levite legerement puis tombe sur le sol
             // enabled playerF rigidbody2D
 
-            //marionettedispo = true;
+            marionettedispo = true;
 
 
             print("up arrow key is held down");
@@ -58,7 +65,7 @@ public class GestionPlayer : MonoBehaviour
             PlayerM.gameObject.SetActive(false);
             PlayerF.gameObject.SetActive(true);
 
-            //marionettedispo = false;
+            marionettedispo = false;
 
 
 
