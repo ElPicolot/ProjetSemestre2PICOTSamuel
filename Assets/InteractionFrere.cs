@@ -15,58 +15,60 @@ public class InteractionFrere : MonoBehaviour
     {
         
     }
-
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        Debug.Log("Entering");
         if (collision.gameObject.CompareTag("Interupteur1"))
         {
-            Debug.Log("Toucher");
 
+            
 
 
         }
-        if (collision.gameObject.CompareTag("Interupteur3"))
+        if (collision.gameObject.CompareTag("Interupteur2"))
         {
-            
 
+            
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-
+        Debug.Log("Staying");
 
 
         if (collision.gameObject.CompareTag("Interupteur1"))
         {
 
-            if (Input.GetKey("t"))
+            if (Input.GetKey("f"))
             {
-                Debug.Log("t");
+                Debug.Log("f");
                 Destroy(gameObject);
             }
         }
-        if (collision.gameObject.CompareTag("Interupteur3"))
+        if (collision.gameObject.CompareTag("Interupteur2"))
         {
-            if(Input.GetKey("r"))
+            if (Input.GetKey("g"))
             {
-
-                Debug.Log("r");
+                Debug.Log("g");
+                
             }
 
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        Debug.Log("Exit");
         if (collision.gameObject.CompareTag("Interupteur1"))
         {
 
-
+            
 
         }
-        if (collision.gameObject.CompareTag("Interupteur3"))
+        if (collision.gameObject.CompareTag("Interupteur2"))
         {
 
-
+            
         }
     }
+
 }
