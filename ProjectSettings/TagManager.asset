@@ -12,6 +12,8 @@ TagManager:
   - Interupteur2
   - Interupteur1
   - Interupteur3
+  - lightactiv
+  - lightavtiv2
   layers:
   - Default
   - TransparentFX

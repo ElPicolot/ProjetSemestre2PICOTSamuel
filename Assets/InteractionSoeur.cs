@@ -6,6 +6,7 @@ public class InteractionSoeur : MonoBehaviour
 {
     bool onInteru1 = false;
     bool onInteru2 = false;
+    //public Light lightactiv;
     // Start is called before the first frame update
     void Start()
     {
@@ -40,6 +41,18 @@ public class InteractionSoeur : MonoBehaviour
         {
 
             onInteru1 = true;
+
+
+
+
+            //lightactiv.enabled = true;
+            
+
+           
+
+                
+            
+
 
 
         }
@@ -81,6 +94,7 @@ public class InteractionSoeur : MonoBehaviour
         {
 
             onInteru1 = false;
+            //lightactiv.enabled = false;
 
         }
         if (collision.gameObject.CompareTag("Interupteur2"))

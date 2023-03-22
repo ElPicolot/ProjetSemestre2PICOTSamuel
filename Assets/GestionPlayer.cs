@@ -25,8 +25,8 @@ public class GestionPlayer : MonoBehaviour
         if (Input.GetKey("c"))
         {
             //&& isSwitchAvailable)
-            PlayerF.gameObject.GetComponent<DeplacementBasic>().enabled = false;
-            PlayerM.gameObject.GetComponent<DeplacementBasic>().enabled = true;
+            //PlayerF.gameObject.GetComponent<DeplacementBasic>().enabled = false;
+            //PlayerM.gameObject.GetComponent<DeplacementBasic>().enabled = true;
 
             if(isSwitchAvailable)
             {
@@ -57,8 +57,8 @@ public class GestionPlayer : MonoBehaviour
         
         {
             
-            PlayerM.gameObject.GetComponent<DeplacementBasic>().enabled = true;
-            PlayerF.gameObject.GetComponent<DeplacementBasic>().enabled = false;
+            //PlayerM.gameObject.GetComponent<DeplacementBasic>().enabled = true;
+            //PlayerF.gameObject.GetComponent<DeplacementBasic>().enabled = false;
             
             
 
