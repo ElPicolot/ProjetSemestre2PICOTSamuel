@@ -6,6 +6,7 @@ using UnityEngine;
 public class script2 : MonoBehaviour
 {
     public UnityEngine.Rendering.Universal.Light2D lightactiv2;
+    [SerializeField] GameObject Door2;
 
     void Start()
     {
@@ -36,6 +37,10 @@ public class script2 : MonoBehaviour
 
 
             lightactiv2.enabled = true;
+            //gameObject.tag = "porte2";
+            //Destroy(door);box et rigidboy opacite alpha couleur
+            Door2.GetComponent<BoxCollider2D>().enabled = false;
+            Door2.GetComponent<SpriteRenderer>().color = new Color(255, 147, 0, 125);
 
         }
     }
@@ -48,6 +53,8 @@ public class script2 : MonoBehaviour
 
 
             lightactiv2.enabled = false;
+            Door2.GetComponent<BoxCollider2D>().enabled = true;
+            Door2.GetComponent<SpriteRenderer>().color = new Color(255, 147, 0, 255);
 
         }
     }
