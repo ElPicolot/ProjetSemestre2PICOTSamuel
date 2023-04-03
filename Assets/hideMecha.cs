@@ -28,7 +28,8 @@ public class hideMecha : MonoBehaviour
             col.a = 1;
             character.color = col;
 
-             
+
+
         }
     }
 
