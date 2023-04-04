@@ -10,8 +10,11 @@ public class InvisibleZone : MonoBehaviour
 
     private void Update()
     {
-        activationTime += Time.deltaTime;
-        if (ia.IsHidden && activationTime >= 13)
+        if (ia.IsHidden)
+        {
+            activationTime += Time.deltaTime;
+        }
+        if (ia.IsHidden && activationTime >= 10)
         {
             ia.IsHidden = false;
 
@@ -24,6 +27,7 @@ public class InvisibleZone : MonoBehaviour
         if (collision.CompareTag("Girl1"))
         {
             ia.IsHidden = true;
+            
         }
  
    }
@@ -32,6 +36,7 @@ public class InvisibleZone : MonoBehaviour
         if (collision.CompareTag("Girl1"))
         {
             ia.IsHidden = false;
+            activationTime = 0;
         }
     }
 }
