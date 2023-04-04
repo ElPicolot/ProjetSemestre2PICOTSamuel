@@ -8,8 +8,10 @@ public class iabasic : MonoBehaviour
     public Transform target;
     [SerializeField]Transform depart;
     [SerializeField] public float speed = 5f;
+    public GestionPlayer GestionPlayer;
     private void Update()
     {
+        
        
         if (!IsHidden)
         {
@@ -20,6 +22,8 @@ public class iabasic : MonoBehaviour
         {
             transform.position = Vector3.MoveTowards(transform.position, depart.position, speed * Time.deltaTime);
         }
+
+        
     }
     //modif script tentative de devenir insensible
 }

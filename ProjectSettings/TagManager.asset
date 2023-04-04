@@ -17,6 +17,7 @@ TagManager:
   - porte1
   - porte2
   - door
+  - EnemiSwitch
   layers:
   - Default
   - TransparentFX
