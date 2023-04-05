@@ -10,7 +10,7 @@ public class DeplacementBasic : MonoBehaviour
     float MovementY;
     [SerializeField] bool is_jumping = false;
     [SerializeField] bool grounded = false;
-    float jumpForce = 12000f;
+    [SerializeField] float jumpForce = 1200f;
 
     Rigidbody2D Rb;
     // Start is called before the first frame update
@@ -40,7 +40,7 @@ public class DeplacementBasic : MonoBehaviour
     void FixedUpdate()
     {
         // Jump
-        if (is_jumping && grounded)
+        if (is_jumping &&  grounded)
         {
             is_jumping = false;
             Rb.AddForce(new Vector2(0, jumpForce), ForceMode2D.Impulse);
@@ -53,11 +53,12 @@ public class DeplacementBasic : MonoBehaviour
         {
 
             grounded = true;
+
             
 
         }
     }
-    private void OnTriggerStay2D(Collider2D collision)
+   /* private void OnTriggerStay2D(Collider2D collision)
     {
         grounded = true;
 
@@ -67,14 +68,14 @@ public class DeplacementBasic : MonoBehaviour
            
             grounded = true;
         }
-    }
+    }*/
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Plateforme"))
         {
             
             grounded = false;
-            Rb.gravityScale = 3f;
+            Rb.gravityScale = 3000f;
 
         }
     }

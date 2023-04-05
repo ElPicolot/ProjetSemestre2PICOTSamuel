@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 57907174}
   m_Layer: 0
   m_Name: Square (3)
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -749,9 +749,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee1d72f856983be44a8ffbee5a38c3b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 10
+  speed: 0
   is_jumping: 0
   grounded: 0
+  jumpForce: 12
 --- !u!114 &295198812
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1160,7 +1161,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 470721985}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 74.15, y: 16.07, z: 0}
+  m_LocalPosition: {x: 73.98, y: 15.99, z: 0}
   m_LocalScale: {x: 2.8296, y: 2.8296, z: 2.8296}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2813,7 +2814,7 @@ GameObject:
   - component: {fileID: 1225312908}
   m_Layer: 0
   m_Name: Square (10)
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3103,8 +3104,8 @@ GameObject:
   - component: {fileID: 1313170243}
   - component: {fileID: 1313170242}
   - component: {fileID: 1313170241}
+  - component: {fileID: 1313170249}
   - component: {fileID: 1313170244}
-  - component: {fileID: 1313170245}
   - component: {fileID: 1313170246}
   - component: {fileID: 1313170247}
   - component: {fileID: 1313170248}
@@ -3127,10 +3128,10 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 10000
+  m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 40
+  m_GravityScale: 10
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -3219,21 +3220,6 @@ CapsuleCollider2D:
   m_Offset: {x: -0.041030884, y: 0.16555786}
   m_Size: {x: 1.4473724, y: 6.6572456}
   m_Direction: 0
---- !u!114 &1313170245
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1313170240}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ee1d72f856983be44a8ffbee5a38c3b3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 5000
-  is_jumping: 0
-  grounded: 0
 --- !u!114 &1313170246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3278,6 +3264,20 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
+--- !u!114 &1313170249
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313170240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e5cababebe14c8488a9eec4be5a0af0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rb: {fileID: 1313170241}
+  jumpAmount: 50
 --- !u!1 &1316925109
 GameObject:
   m_ObjectHideFlags: 0
@@ -3660,9 +3660,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ee1d72f856983be44a8ffbee5a38c3b3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 500
+  speed: 0
   is_jumping: 0
   grounded: 0
+  jumpForce: 12
 --- !u!212 &1463687137
 SpriteRenderer:
   m_ObjectHideFlags: 0

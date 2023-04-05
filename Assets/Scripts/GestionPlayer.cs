@@ -69,6 +69,14 @@ public class GestionPlayer : MonoBehaviour
             //PlayerM.gameObject.GetComponent<DeplacementBasic>().enabled = true;
             //PlayerF.gameObject.GetComponent<DeplacementBasic>().enabled = false;
             
+            //Image assis atteint
+            //De ne pas desactiver daeja 
+            //Donc prendre des degats 
+            // Borner la cam (A faire)
+            //Recast player 1 player 2 
+            // si depasse certaines distance bloque 
+
+            // Ajout ennemi a fon avec interaction collision = dead + anim attaque ennemi
             
 
             PlayerM.gameObject.SetActive(false);
