@@ -12,16 +12,14 @@ public class GestionPlayer : MonoBehaviour
     bool isSwitchAvailable = false;
     bool marionettedispo = false;
     int timeMarionnette = 5;
-    bool player1Present;
-    bool player2Present;
+    
     //[SerializeField] GameObject 
 
     // Start is called before the first frame update
     void Start()
     {
         isSwitchAvailable = true;
-         player1Present = true;
-         player2Present = true;
+         
     }
 
     // Update is called once per frame
@@ -43,10 +41,10 @@ public class GestionPlayer : MonoBehaviour
             }
             PlayerF.gameObject.SetActive(false);
             PlayerM.gameObject.SetActive(true);
-            player1Present = false;
-            player2Present = true;
-            Debug.Log("player2" + player2Present);
-            Debug.Log("player1" + player1Present);
+            GetComponent<CameraManager>().player1Present = false;
+            GetComponent<CameraManager>().player2Present = false;
+            //Debug.Log("player2" + player2Present);
+            //Debug.Log("player1" + player1Present);
 
             // active le sprite renderer
             // change le tag du player avec la marionette
@@ -83,11 +81,11 @@ public class GestionPlayer : MonoBehaviour
             PlayerF.gameObject.SetActive(true);
 
             marionettedispo = false;
-            player1Present = true;
-            player2Present = false;
+            GetComponent<CameraManager>().player1Present = true;
+            GetComponent<CameraManager>().player2Present = true;
 
-            Debug.Log("player2"+player2Present);
-            Debug.Log("player1"+player1Present);
+            //Debug.Log("player2"+player2Present);
+            //Debug.Log("player1"+player1Present);
 
 
 
