@@ -28,6 +28,7 @@ public class DeplacementBasic2 : MonoBehaviour
 
         Rb.velocity = new Vector2(MovementX2 * speed2 * Time.deltaTime, MovementY2 * speed2 * Time.deltaTime);
         */
+        /*
         if (Input.GetKey("k"))
         {
             transform.position += Vector3.left * speed2 * Time.deltaTime;
@@ -36,13 +37,32 @@ public class DeplacementBasic2 : MonoBehaviour
         {
             transform.position += Vector3.right * speed2 * Time.deltaTime;
         }
+        */
         /*if (Input.GetKey("o"))
         {
             transform.position += Vector3.up * speed2 * Time.deltaTime;
         }*/
+        /*
         if (Input.GetKey("l"))
         {
             transform.position += Vector3.down * speed2 * Time.deltaTime;
+        }*/
+        /*
+        if (Input.GetKey("k"))
+        {
+            transform.position += Vector3.left * speed2 * Time.deltaTime;
+        }
+        if (Input.GetKey("m"))
+        {
+            
+        }*/
+        if (Input.GetKey(KeyCode.LeftArrow))
+        {
+            transform.position += Vector3.left * speed2 * Time.deltaTime;
+        }
+        if (Input.GetKey(KeyCode.RightArrow))
+        {
+            transform.position += Vector3.right * speed2 * Time.deltaTime;
         }
     }
 }

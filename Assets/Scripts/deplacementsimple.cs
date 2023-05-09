@@ -54,7 +54,7 @@ public class deplacementsimple : MonoBehaviour
 
 	void Movement()
 	{
-		if (Input.GetKey(KeyCode.RightArrow))
+		/*if (Input.GetKey(KeyCode.RightArrow))
 		{
 			transform.Translate(Vector2.right * 20f * Time.deltaTime);
 			transform.eulerAngles = new Vector2(0, 0);
@@ -77,7 +77,31 @@ public class deplacementsimple : MonoBehaviour
 			transform.Translate(Vector2.up * 20f * Time.deltaTime);
 			transform.eulerAngles = new Vector2(180, 0);
 		}
+		*/
+		/*
+		if (Input.GetKey(KeyCode.A))
+		{
+			transform.Translate(Vector2.up * 20f * Time.deltaTime);
+			transform.eulerAngles = new Vector2(0, 0);
+		}
 
+		if (Input.GetKey(KeyCode.Q))
+		{
+			transform.Translate(Vector2.up * 20f * Time.deltaTime);
+			transform.eulerAngles = new Vector2(180, 0);
+		}
+		*/
+		if (Input.GetKey(KeyCode.G))
+		{
+			transform.Translate(Vector2.right * 20f * Time.deltaTime);
+			transform.eulerAngles = new Vector2(0, 0);
+		}
+
+		if (Input.GetKey(KeyCode.F))
+		{
+			transform.Translate(Vector2.right * 20f * Time.deltaTime);
+			transform.eulerAngles = new Vector2(0, 180);
+		}
 	}
 }
 
