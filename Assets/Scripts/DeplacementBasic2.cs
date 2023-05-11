@@ -10,7 +10,16 @@ public class DeplacementBasic2 : MonoBehaviour
     float MovementY2;
     [SerializeField] float speed2;
     Rigidbody2D Rb;
-    // Start is called before the first frame update
+    /*
+    float moveSpeed = 10;
+    //Define the speed at which the object moves.
+
+    float horizontalInput = Input.GetAxis("Horizontal2");
+    //Get the value of the Horizontal input axis.
+
+    
+    //Get the value of the Vertical input axis.
+    // Start is called before the first frame update*/
     void Start()
     {
         Rb = GetComponent<Rigidbody2D>();
@@ -56,6 +65,8 @@ public class DeplacementBasic2 : MonoBehaviour
         {
             
         }*/
+
+        
         if (Input.GetKey(KeyCode.LeftArrow))
         {
             transform.position += Vector3.left * speed2 * Time.deltaTime;
@@ -64,6 +75,12 @@ public class DeplacementBasic2 : MonoBehaviour
         {
             transform.position += Vector3.right * speed2 * Time.deltaTime;
         }
+        
+        
+        
+        /*
+        transform.Translate(new Vector3(horizontalInput, 0, 0) * moveSpeed * Time.deltaTime);
+        //Move the object to XYZ coordinates defined as horizontalInput, 0, and verticalInput respectively.*/
     }
 }
 
