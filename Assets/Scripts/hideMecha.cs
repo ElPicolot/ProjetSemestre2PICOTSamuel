@@ -8,6 +8,8 @@ public class hideMecha : MonoBehaviour
     private Color col;
     private float activationTime;
     private bool invisible;
+    int manaDispo = 100;
+    int manaMax = 100;
     // Start is called before the first frame update
     void Start()
     {
@@ -42,7 +44,11 @@ public class hideMecha : MonoBehaviour
             col.a = .2f;
             character.color = col;
         }
-        
+        if (other.tag == "PotionMana")
+        {
+            manaDispo += 100;
+            //DestroyObject("PotionMana");
+        }
     }
 
     private void OnTriggerExit2D(Collider2D other)
