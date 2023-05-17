@@ -15,7 +15,7 @@ public class InteractionSoeur : MonoBehaviour
 
     // Update is called once per frame
     void Update()
-    {
+    {/*
         if (onInteru1)
         {
             if (Input.GetKey("t"))
@@ -31,11 +31,11 @@ public class InteractionSoeur : MonoBehaviour
                 Debug.Log("y");
             }
 
-        }
+        }*/
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
-    {
+    {/*
         Debug.Log("Entering");
         if (collision.gameObject.CompareTag("Interupteur1"))
         {
@@ -61,7 +61,7 @@ public class InteractionSoeur : MonoBehaviour
 
             onInteru2 = true;
 
-        }
+        }*/
     }
     /*private void OnTriggerStay2D(Collider2D collision)
     {
