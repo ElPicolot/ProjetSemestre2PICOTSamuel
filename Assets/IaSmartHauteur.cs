@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class iabasic2 : MonoBehaviour
+public class IaSmartHauteur : MonoBehaviour
 {
     public bool IsHidden;
     public Transform target;
@@ -27,7 +27,7 @@ public class iabasic2 : MonoBehaviour
         {
             transform.position = new Vector3(transform.position.x, hauteur, transform.position.z);
         }
-        
+
         transform.Translate(Vector2.right * speed * Time.deltaTime);
 
     }

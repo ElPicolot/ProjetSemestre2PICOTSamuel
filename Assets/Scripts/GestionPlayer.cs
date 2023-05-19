@@ -180,7 +180,7 @@ public class GestionPlayer : MonoBehaviour
         }
         if(!marionettedispo)
         {
-            manaDispo -= 0.2f;
+            manaDispo -= 0.01f;
         }
     }
 }
