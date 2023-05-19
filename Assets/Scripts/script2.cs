@@ -35,7 +35,7 @@ public class script2 : MonoBehaviour
 
 
 
-
+            //test
             lightactiv2.enabled = true;
             //gameObject.tag = "porte2";
             //Destroy(door);box et rigidboy opacite alpha couleur
