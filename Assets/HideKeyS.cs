@@ -1,15 +1,17 @@
-/*using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class hideMecha : MonoBehaviour
+public class HideKeyS : MonoBehaviour
 {
     private SpriteRenderer character;
     private Color col;
     private float activationTime;
     private bool invisible;
+    bool canbeInvisible;
     int manaDispo = 100;
     int manaMax = 100;
+    bool toucheApp=false;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,20 +31,26 @@ public class hideMecha : MonoBehaviour
             invisible = false;
             col.a = 1;
             character.color = col;
-
-
-
         }
-
-    }
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if(other.tag == "Invisible")
+        if(canbeInvisible && toucheApp)
         {
             invisible = true;
             activationTime = 0;
             col.a = .2f;
             character.color = col;
+        }
+        /*if(Input.GetKey("r") && canbeInvisible &&)
+        {
+            toucheApp = !toucheApp;
+            Debug.Log("A");
+        }*/
+    }
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.tag == "Invisible")
+        {
+            canbeInvisible = true;
+            
         }
         if (other.tag == "PotionMana")
         {
@@ -62,4 +70,3 @@ public class hideMecha : MonoBehaviour
 
     }
 }
-*/
