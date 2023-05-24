@@ -15616,8 +15616,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b07fc20185596ed4c904f4f27ef57bd2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  marionettepresente: 0
-  PlayerM: {fileID: 295198806}
+  present2: {fileID: 1313170254}
+  target: {fileID: 1313170243}
+  speed: 5
 --- !u!1 &295965999
 GameObject:
   m_ObjectHideFlags: 0
@@ -42909,6 +42910,7 @@ GameObject:
   - component: {fileID: 882184498}
   - component: {fileID: 882184497}
   - component: {fileID: 882184500}
+  - component: {fileID: 882184503}
   - component: {fileID: 882184501}
   - component: {fileID: 882184502}
   m_Layer: 0
@@ -42991,13 +42993,14 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882184496}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05f956819390cf941b3f2d96f3fa1cee, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   PlayerF: {fileID: 1313170240}
   PlayerM: {fileID: 295198806}
+  present: 0
 --- !u!114 &882184501
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43005,7 +43008,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 882184496}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 57651ee4ea88a22419fda2ad35d4ee35, type: 3}
   m_Name: 
@@ -43047,6 +43050,23 @@ MonoBehaviour:
   m_RequiresDepthTexture: 0
   m_RequiresColorTexture: 0
   m_Version: 2
+--- !u!114 &882184503
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 882184496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 28e4ca43179d38142b9eadf76bf784f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  targets:
+  - {fileID: 1313170243}
+  - {fileID: 295198808}
+  offset: {x: 0, y: 0, z: -4.28}
+  smoothTime: 0.5
 --- !u!1 &882541128
 GameObject:
   m_ObjectHideFlags: 0
@@ -64951,6 +64971,7 @@ GameObject:
   - component: {fileID: 1313170248}
   - component: {fileID: 1313170252}
   - component: {fileID: 1313170253}
+  - component: {fileID: 1313170254}
   m_Layer: 0
   m_Name: Fille
   m_TagString: Girl1
@@ -65039,7 +65060,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1313170240}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -364, y: 554, z: 0}
+  m_LocalPosition: {x: 1008.7, y: 612.9, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -65150,6 +65171,25 @@ MonoBehaviour:
   time: 2
   timeStore: 2
   touchapp: 1
+--- !u!114 &1313170254
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1313170240}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9caa7f23600608545a38d1d194373002, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  frere: {fileID: 295198806}
+  marionettedispo: 1
+  present: 0
+  time: 0.3
+  timeStore: 0.3
+  invisiblefrere: {fileID: 21300000, guid: 52a5f8906b3a481499a1e36d3c8c81e4, type: 3}
+  visiblefrere: {fileID: 21300000, guid: 1a7300795e6001a47a3449babd6b7b76, type: 3}
 --- !u!1 &1315463700
 GameObject:
   m_ObjectHideFlags: 0

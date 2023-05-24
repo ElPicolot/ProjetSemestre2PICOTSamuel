@@ -14,7 +14,7 @@ public class GestionPlayer : MonoBehaviour
     int timeMarionnette = 5;
     float manaMax = 200;
     float manaDispo;
-
+    [SerializeField] bool present;
     //[SerializeField] GameObject 
 
     // Start is called before the first frame update

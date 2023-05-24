@@ -4,24 +4,24 @@ using UnityEngine;
 
 public class RevientInventaire : MonoBehaviour
 {
-    [SerializeField] public bool marionettepresente;
-    [SerializeField] GameObject PlayerM;
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    // L Ia te fonce dessus a vole d oiseau 
+    [SerializeField] SummonCam  present2 ;
+    public Transform target ;
+    [SerializeField] public float speed ;
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        if(!marionettepresente)
-        {
-           
-        
+        Debug.Log(" pas present");
         //transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
-        //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
-        
+        //if (!(present2.present))
+        //if (GameObject.Find("Fille").GetComponent<SummonCam>().present)
+        if(true)
+        {
+            Debug.Log("N'est plus du tou tpresent");
+            transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
         }
     }
 }
+
+    
+
