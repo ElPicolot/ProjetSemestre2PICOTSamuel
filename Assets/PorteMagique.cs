@@ -14,7 +14,7 @@ public class PorteMagique : MonoBehaviour
     [SerializeField] Sprite porteDesactiver2;
     [SerializeField] Sprite levierBas2;
     [SerializeField] Sprite levierHaut2;
-    public SpriteRenderer spriteRenderer2;
+    public SpriteRenderer spriteRenderer2; 
 
 
     // Start is called before the first frame update
