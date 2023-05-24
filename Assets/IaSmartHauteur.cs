@@ -10,10 +10,14 @@ public class IaSmartHauteur : MonoBehaviour
     [SerializeField] public float speed = 5f;
     public GestionPlayer GestionPlayer;
     [SerializeField] int hauteur;
+    //[SerializeField] int range;
+    //[SerializeField] GameObject object2;
+    //int verif;
     private void Update()
     {
-
-
+        /*Vector3 difference = new Vector3(v1.x - v2.x,v1.y - v2.y,v1.z - v2.z);
+        float distance = Math.Sqrt(Math.Pow(difference.x, 2f) +Math.Pow(difference.y, 2f) );
+        Vector3.Distance(target.transform.position, object2.transform.position);*/
         if (!IsHidden)
         {
             // transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);

@@ -18,6 +18,14 @@ TagManager:
   - porte2
   - door
   - EnemiSwitch
+  - manasimple
+  - manajaune
+  - manaviolet
+  - Ennemi1
+  - Trou
+  - CheckPoint
+  - Ennemi2
+  - Jafar
   layers:
   - Default
   - TransparentFX

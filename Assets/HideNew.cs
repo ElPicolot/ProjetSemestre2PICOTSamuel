@@ -72,6 +72,38 @@ public class HideNew : MonoBehaviour
 
         }
         
+        if ((other.tag == "Ennemi1")&& !invisible)
+        {
+                Debug.Log("Meurt de lennemi1");
+                //canBeInvisible = true;
+
+        }
+        if ((other.tag == "Ennemi2")&& !invisible)
+        {
+                Debug.Log("Meurt de lennemi2");
+                //canBeInvisible = true;
+
+        }
+        if ((other.tag == "Jafar")&& !invisible)
+        {
+                Debug.Log("Meurt de Jafar");
+                //canBeInvisible = true;
+
+        }
+        if (other.tag == "Trou")
+        {
+            Debug.Log("Meurt de Trou");
+
+            //canBeInvisible = true;
+
+        }
+        /*if (other.tag == "CheckPoint")
+        {
+            Debug.Log("Chec");
+            //canBeInvisible = true;
+
+        }*/
+
     }
     private void OnTriggerExit2D(Collider2D other)
     {
@@ -85,3 +117,13 @@ public class HideNew : MonoBehaviour
 
     }
 }
+/*
+ public class SpawnPlayer : MonoBehaviour
+{
+    public Transform spawnPoint;
+    
+    public void Spawn()
+    {
+        transform.position = spawnPoint.position;
+    }
+} */
