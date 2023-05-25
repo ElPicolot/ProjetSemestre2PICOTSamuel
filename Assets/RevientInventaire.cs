@@ -8,9 +8,15 @@ public class RevientInventaire : MonoBehaviour
     [SerializeField] SummonCam  present2 ;
     public Transform target ;
     [SerializeField] public float speed ;
+    [SerializeField] public float speedOuf;
+    [SerializeField] float distance;
+    [SerializeField] public GameObject object1;
+    [SerializeField] float range;
+
 
     private void Update()
     {
+        distance = Vector3.Distance(object1.transform.position, target.transform.position);
         //transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
         Debug.Log(" pas present");
         //transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
@@ -25,10 +31,18 @@ public class RevientInventaire : MonoBehaviour
         }*/
         if (!(present2.present))
         {
-            Debug.Log("N'est plus du tou tpresent");
-            transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            if (distance < range)
+            {
+                Debug.Log("N'est plus du tou tpresent");
+                transform.position = Vector3.MoveTowards(transform.position, target.position, speed * Time.deltaTime);
+            }
+            else
+            {
+                Debug.Log("N'est plus du tou tpresent");
+                transform.position = Vector3.MoveTowards(transform.position, target.position, speedOuf * Time.deltaTime);
+            }
         }
-
+        //if trop loin va super vite sinon va lentement
         }
 }
 

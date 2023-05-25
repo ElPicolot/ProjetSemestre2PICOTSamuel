@@ -35,6 +35,22 @@ public class deplacementsimple : MonoBehaviour
 		}
 	}
 
+	private void OnCollisionStay2D(Collision2D collision)
+	{
+
+		if (collision.gameObject.tag == "Ladder")
+		{
+			toucheSol = true;
+		}
+		if (collision.gameObject.tag == "porte1")
+		{
+			toucheSol = true;
+		}
+		if (collision.gameObject.tag == "porte2")
+		{
+			toucheSol = true;
+		}
+	}
 	private void OnCollisionExit2D(Collision2D collision)
 	{
 

@@ -52,6 +52,7 @@ public class SummonCam : MonoBehaviour
                 //transform.position = new Vector3(transform.position.x, transform.position.y, transform.position.z);
                 //frere.gameObject.SetActive(false);
                 frere.GetComponent<SpriteRenderer>().sprite = invisiblefrere;
+                frere.GetComponent<CapsuleCollider2D>().enabled = false;
                 //PlayerF.gameObject.SetActive(true);
 
                 marionettedispo = true;
@@ -87,6 +88,7 @@ public class SummonCam : MonoBehaviour
                 //PlayerF.gameObject.SetActive(false);
                 //frere.gameObject.SetActive(true);
                 frere.GetComponent<SpriteRenderer>().sprite = visiblefrere;
+                frere.GetComponent<CapsuleCollider2D>().enabled = true;
 
                 //GetComponent<CameraManager>().player1Present = false;
                 // GetComponent<CameraManager>().player2Present = false;
